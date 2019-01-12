@@ -34,6 +34,9 @@ const CallBtn = styled.button`
   font-size: 18px;
   font-weight: bold;
   margin-top: 32px;
+  &:hover {
+    background-color: #f48520;
+  }
 `
 
 class Main extends React.Component {

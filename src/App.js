@@ -14,8 +14,11 @@ const url = process.env.PUBLIC_URL+'/img/bg.jpeg';
 const HeaderWrapper = styled.header`
   width: 100%;
   height: 49px;
-  background-color: #242424;
-  opacity: 0.8;
+  background-color: #595959;
+  opacity: 1;
+  position: sticky;
+  top: 0px;
+  z-index: 999;
 `
 
 const MenuWrapper = styled.div`
