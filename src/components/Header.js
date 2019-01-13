@@ -5,6 +5,7 @@ import Col from 'react-bootstrap/lib/Col';
 import styled from 'styled-components';
 
 import Link from './Link'
+import {Link as RouterLink} from 'react-router-dom'; // подключение роутер ссылок as меняет название
 
 const List = styled.ul`
   display: flex;
@@ -21,8 +22,8 @@ class Header extends React.Component {
         <Col lg={12}>
           <nav>
             <List>
-              <Link link="#" text="Вызов мастера"/>
-              <Link link="#" text="Прайс на ремонт"/>
+              <RouterLink to='/'>Главная</RouterLink>
+              <RouterLink to='/second'>Прайс на ремонт</RouterLink>
               <Link link="#" text="Наши преимущества"/>
               <Link link="#" text="Схема работы"/>
               <Link link="#" text="Отзывы клиентов"/>

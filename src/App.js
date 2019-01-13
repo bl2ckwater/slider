@@ -8,6 +8,8 @@ import styled from 'styled-components';
 import Header from './components/Header'
 import Menu from './components/Menu'
 import Main from './components/Main'
+import {BrowserRouter as Router, Route} from 'react-router-dom';
+import SecondPage from './components/SecondPage';
 
 const url = process.env.PUBLIC_URL+'/img/bg.jpeg';
 
@@ -36,7 +38,8 @@ const MainWrapper = styled.main`
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <Router>
+      	<div className="App">
         <HeaderWrapper>
           <Grid>
             <Header />
@@ -49,10 +52,12 @@ class App extends Component {
         </MenuWrapper>
         <MainWrapper>
           <Grid>
-            <Main />
+            <Route path='/' component={Main} exact/>
+            <Route path='/second' component={SecondPage}/>
           </Grid>
         </MainWrapper>
       </div>
+      </Router>
     );
   }
 }
